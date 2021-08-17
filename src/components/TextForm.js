@@ -3,13 +3,13 @@ import React, {useState} from 'react'
 
 export default function TextForm(props) {
     const handleUpClick = ()=>{
-        console.log("Uppercase was Clicked" + text);
+        // console.log("Uppercase was Clicked" + text);
         let newText = text.toUpperCase();
         setText(newText)
     }
 
     const handleOnChange = (event)=>{
-        console.log("on Change");
+       // console.log("on Change");
         setText(event.target.value);
     }
     const[text, setText] = useState('Enter Text Here');
