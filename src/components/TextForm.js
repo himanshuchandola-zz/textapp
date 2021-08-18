@@ -32,6 +32,13 @@ export default function TextForm(props) {
         window.speechSynthesis.speak(msg);
       };
     
+      const handleCopyClick = () => {
+        let copyText = document.querySelector("textarea");
+        copyText.select();
+        copyText.setSelectionRange(0, 99999);   navigator.clipboard.writeText(copyText.value);
+        alert("Copied the text : " + copyText.value);
+      };
+
     const handleOnChange = (event)=>{
        // console.log("on Change");
         setText(event.target.value);
@@ -49,6 +56,7 @@ export default function TextForm(props) {
                 <button className="btn btn-primary mx-2" onClick={handleClearClick}>Clear Text</button>
                 <button className="btn btn-primary mx-2" onClick={capitalize}>Capitalize First Text</button>
                 <button className="btn btn-primary mx-2" onClick={handleTextToSpeech}>Text to Audio</button>
+                <button className="btn btn-primary mx-2" onClick={handleCopyClick}>Copy Text to Clipboard</button>
         </div>
         <div className="container my-3">
             <h2>Text Summary</h2>
