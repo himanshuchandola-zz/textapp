@@ -59,6 +59,11 @@ export default function TextForm(props) {
     }
   };
 
+  const handleReverseClick = () =>{
+    let newText = text.split(" ").reverse( ).join(" ");
+    setText(newText)
+}
+
     const handleOnChange = (event)=>{
        // console.log("on Change");
         setText(event.target.value);
@@ -71,13 +76,14 @@ export default function TextForm(props) {
             <div className="mb-3">
             <textarea className="form-control" value={text} onChange={handleOnChange} id="myBox" rows="8"></textarea>
                 </div> 
-                <button className="btn btn-primary mx-2" onClick={handleUpClick}>Convert to UpperCase</button>
-                <button className="btn btn-primary mx-2" onClick={handleLoClick}>Convert to LowerCase</button>
-                <button className="btn btn-primary mx-2" onClick={handleClearClick}>Clear Text</button>
-                <button className="btn btn-primary mx-2" onClick={capitalize}>Capitalize First Text</button>
-                <button className="btn btn-primary mx-2" onClick={handleTextToSpeech}>Text to Audio</button>
-                <button className="btn btn-primary mx-2" onClick={handleCopyClick}>Copy Text to Clipboard</button>
-                <button className="btn btn-primary mx-2" onClick={handleRwClick}>Remove Word from Text</button>
+                <button className="btn btn-primary mx-1" onClick={handleUpClick}>Convert to UpperCase</button>
+                <button className="btn btn-primary mx-1" onClick={handleLoClick}>Convert to LowerCase</button>
+                <button className="btn btn-primary mx-1" onClick={handleClearClick}>Clear Text</button>
+                <button className="btn btn-primary mx-1" onClick={capitalize}>Capitalize First Text</button>
+                <button className="btn btn-primary mx-1" onClick={handleTextToSpeech}>Text to Audio</button>
+                <button className="btn btn-primary mx-1" onClick={handleCopyClick}>Copy Text to Clipboard</button>
+                <button className="btn btn-primary mx-1" onClick={handleRwClick}>Remove Word from Text</button>
+                <button className="btn btn-primary gy-1" onClick={handleReverseClick}>Reverse Text</button>
         </div>
         <div className="container my-3">
             <h2>Text Summary</h2>
