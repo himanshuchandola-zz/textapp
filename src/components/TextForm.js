@@ -18,6 +18,7 @@ export default function TextForm(props) {
     const handleClearClick = ()=>{
         let newText = '';
         setText(newText)
+        props.showAlert("Text Has been Cleared", "success");
     }
 
     const capitalize = () => {
@@ -25,6 +26,7 @@ export default function TextForm(props) {
         let firstchar = text.charAt(0); 
         let newText= firstchar.toUpperCase(); 
         setText(newText+text.slice(1)); 
+        props.showAlert("First letter of Text is Changed to Capital Letter", "success");
 
     }
 
@@ -32,6 +34,7 @@ export default function TextForm(props) {
         var msg = new SpeechSynthesisUtterance();
         msg.text = text;     //  text what you written
         window.speechSynthesis.speak(msg);
+        props.showAlert("Text Converted to Audio", "success");
       };
     
     const handleCopy =() =>{
@@ -64,6 +67,7 @@ export default function TextForm(props) {
   const handleReverseClick = () =>{
     let newText = text.split(" ").reverse( ).join(" ");
     setText(newText)
+    props.showAlert("Text is Reversed", "success");
 }
 
     const handleOnChange = (event)=>{
