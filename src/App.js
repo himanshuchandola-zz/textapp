@@ -20,7 +20,7 @@ function App() {
   return (
   <>
 {/* <Navbar title="TextApp by Himanshu Chandola" aboutText="About"/> */}
-<Navbar title="TextApp by Himanshu Chandola" mode={mode} toggle={toggleMode} />
+<Navbar title="TextApp by Himanshu Chandola" mode={mode} toggleMode={toggleMode} />
 <div className="container my-3">
 <TextForm heading="Enter The Text to analyze below"/>
 {/* <About/> */}
