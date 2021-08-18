@@ -34,13 +34,14 @@ export default function TextForm(props) {
         window.speechSynthesis.speak(msg);
       };
     
-      const handleCopyClick = () => {
-        let copyText = document.querySelector("textarea");
-        copyText.select();
-        copyText.setSelectionRange(0, 99999);   navigator.clipboard.writeText(copyText.value);
-        alert("Copied the text : " + copyText.value);
-      };
-
+    const handleCopy =() =>{
+      console.log("I am copy");
+        var text = document.getElementById("myBox");
+        text.select();
+        text.setSelectionRange(0, 9999);
+        navigator.clipboard.writeText(text.value);
+        props.showAlert("Copied to Clipboard", "success");
+      }
 
     const handleRwClick = () => {
     let newtext = text.toLowerCase();
@@ -84,7 +85,7 @@ export default function TextForm(props) {
                 <button className="btn btn-primary mx-1" onClick={handleClearClick}>Clear Text</button>
                 <button className="btn btn-primary mx-1" onClick={capitalize}>Capitalize First Text</button>
                 <button className="btn btn-primary mx-1" onClick={handleTextToSpeech}>Text to Audio</button>
-                <button className="btn btn-primary mx-1" onClick={handleCopyClick}>Copy Text to Clipboard</button>
+                <button className="btn btn-primary mx-1" onClick={handleCopy}>Copy Text to Clipboard</button>
                 <button className="btn btn-primary mx-1" onClick={handleRwClick}>Remove Word from Text</button>
                 <button className="btn btn-primary gy-1" onClick={handleReverseClick}>Reverse Text</button>
         </div>
