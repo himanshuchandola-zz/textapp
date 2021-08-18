@@ -6,9 +6,10 @@ import TextForm from './components/TextForm';
 function App() {
   return (
   <>
-<Navbar title="TextApp by Himanshu Chandola" aboutText="About"/>
+{/* <Navbar title="TextApp by Himanshu Chandola" aboutText="About"/> */}
+<Navbar title="TextApp" />
 <div className="container my-3">
- <TextForm heading="Enter The Text to analyze below"/>
+<TextForm heading="Enter The Text to analyze below"/>
 {/* <About/> */}
 </div>
 
