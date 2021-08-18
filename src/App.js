@@ -11,7 +11,7 @@ function App() {
   const toggleMode = ()=>{
     if(mode==='light'){
       setMode('dark');
-      document.body.style.backgroundColor = 'grey';
+      document.body.style.backgroundColor = '#042743';
     }
     else{
       setMode('light');
@@ -24,7 +24,7 @@ function App() {
 {/* <Navbar title="TextApp by Himanshu Chandola" aboutText="About"/> */}
 <Navbar title="TextApp by Himanshu Chandola" mode={mode} toggleMode={toggleMode} />
 <div className="container my-3">
-<TextForm heading="Enter The Text to analyze below"/>
+<TextForm heading="Enter The Text to analyze below" mode={mode}/>
 {/* <About/> */}
 </div>
 
