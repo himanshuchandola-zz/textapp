@@ -39,6 +39,26 @@ export default function TextForm(props) {
         alert("Copied the text : " + copyText.value);
       };
 
+
+    const handleRwClick = () => {
+    let newtext = text.toLowerCase();
+    newtext = newtext.replaceAll(".","");
+    newtext = newtext.trim().split(" ");
+    let input = prompt("Enter the word you want to remove : ");
+    if (input != null) {
+      input = input.toLowerCase();
+      while (newtext.includes(input)) {
+        let index = newtext.indexOf(input);
+        newtext.splice(index, 1);
+      }
+      newtext = newtext.join(" ");
+      newtext = newtext.replace(newtext.charAt(0),newtext.charAt(0).toUpperCase());
+      setText(newtext);
+    } else {
+      alert("You entered nothing 😑");
+    }
+  };
+
     const handleOnChange = (event)=>{
        // console.log("on Change");
         setText(event.target.value);
@@ -57,6 +77,7 @@ export default function TextForm(props) {
                 <button className="btn btn-primary mx-2" onClick={capitalize}>Capitalize First Text</button>
                 <button className="btn btn-primary mx-2" onClick={handleTextToSpeech}>Text to Audio</button>
                 <button className="btn btn-primary mx-2" onClick={handleCopyClick}>Copy Text to Clipboard</button>
+                <button className="btn btn-primary mx-2" onClick={handleRwClick}>Remove Word from Text</button>
         </div>
         <div className="container my-3">
             <h2>Text Summary</h2>
