@@ -59,6 +59,7 @@ export default function TextForm(props) {
       newtext = newtext.join(" ");
       newtext = newtext.replace(newtext.charAt(0),newtext.charAt(0).toUpperCase());
       setText(newtext);
+      props.showAlert("Your Selected Text has been Deleted", "success");
     } else {
       alert("You entered nothing 😑");
     }
