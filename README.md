@@ -1,4 +1,4 @@
-# TextApp - A text based Utility Web Application using React
+# TextApp - Text Utility Web App using React
 
 <details>
 
@@ -76,3 +76,8 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
 </details>
+<details>
+
+<summary><b>Other Information</b></summary>
+I am learning React and as a learning project i am working on this utility app. Learning from CodeWithHarry [React Playlist] (https://www.youtube.com/playlist?list=PLu0W_9lII9agx66oZnT6IyhcMIbUMNMdt)
+
