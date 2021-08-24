@@ -78,7 +78,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 </details>
 <details>
 
-<summary><b>Other Information</b></summary>
+<summary><b>⚡Other Information</b></summary>
 
 I am learning React by working on this utility app and Learning from CodeWithHarry. [React Playlist](https://www.youtube.com/playlist?list=PLu0W_9lII9agx66oZnT6IyhcMIbUMNMdt)
 
