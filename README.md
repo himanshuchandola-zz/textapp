@@ -1,4 +1,4 @@
-# TextApp - Text Utility Web App using React...
+# TextApp - Text Utility Web App using React..
 
 <details>
 
